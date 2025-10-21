@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  background: #000;
+  overflow-x: hidden;
+}
+
+/* Hiệu ứng nền động */
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff0055, #00ccff, #ffcc00, #00ff88);
+  background-size: 600% 600%;
+  animation: gradientShift 10s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Tiêu đề */
+header {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+.glow {
+  font-size: 3em;
+  text-shadow: 0 0 15px #00e6ff, 0 0 25px #00e6ff, 0 0 45px #00e6ff;
+  animation: glowPulse 2s infinite alternate;
+}
+
+@keyframes glowPulse {
+  from { text-shadow: 0 0 10px #00e6ff; }
+  to { text-shadow: 0 0 30px #00e6ff, 0 0 60px #00e6ff; }
+}
+
+.subtitle {
+  color: #ffeb3b;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+}
+
+/* Thông tin cá nhân */
+.profile-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 600px;
+  padding: 30px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #00e6ff;
+  margin-bottom: 20px;
+}
+
+.profile-card ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  font-size: 1.1em;
+}
+
+.profile-card li {
+  margin: 8px 0;
+}
+
+/* Giới thiệu */
+.about {
+  width: 80%;
+  margin: 40px auto;
+  text-align: justify;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 20px;
+  line-height: 1.6;
+  backdrop-filter: blur(8px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 1em;
+  background: rgba(255,255,255,0.05);
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
